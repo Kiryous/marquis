@@ -1,0 +1,79 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Маркиз</title>
+    <!-- Стили -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Шрифт заголвка и логотипа -->
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/shadow.css" />
+    <!-- Скрипт, который авторесайзит поле заголовка -->
+    <script type="text/javascript">
+    window.onload = function() {
+        $('#title').keyup(function(){
+            $(this).height(30);
+            $(this).height(this.scrollHeight);
+        });
+
+    };
+    </script>
+</head>
+
+<body>
+    
+<div class="container">
+    <h1 class="name">🎩 Маркиз</h1>
+    <p>1. Выберите фоновую фотографию</p>
+    <!-- Загрузка картинки -->
+    <input type="file" id="files" name="files[]" multiple /> или <input id="imageUrl" type="text" placeholder="Cсылка на картинку" onchange="changeBg(this.value)">
+
+    <p>2. Наберите заголовок новости и отрегулируйте положение фона</p>
+    <!-- Скрытые поля определяющие шрифт и размер шрифта -->
+    <form id="title-font">
+        font-family:<input id="title-font-family" type="text" value="PT Sans Caption">  
+        font-size:<input id="title-font-size" type="number" value="52"/>px  
+        font-weight:<input id="title-font-weight" type="text" value="600">
+    </form>
+    <!-- WISWIG окошко -->
+    <div class="cover-container">
+        <div id="cover">
+            <div id="text">
+                <textarea id="title" placeholder="Заголовок новости"></textarea>
+                <!-- (На будущее, для материала) <input id="subtitle" type="text" placeholder="Подзаголовок"/> -->
+            </div>
+            <span class="moloko-logo">Молоко</span>
+        </div>
+        <!-- Регулятор положения фона -->
+        <input type="range" id="bg-position" min="0" max="100" step="0.1" orient="vertical" oninput="changeBgPosition(this.value)"/>
+    </div>
+
+    <p>4. Посмотрите, как картинка будет выглядеть в сетях и опенграфе</p>
+    <!-- Предпросмотр постов в соцсетях -->
+    <!-- <div id="networks-preview">
+        <canvas id="fb-post"></canvas>
+        <canvas id="vk-post"></canvas>
+        <canvas id="twi-post"></canvas>
+    </div>
+ -->
+    <!-- Предпросмотр опенграфа -->
+    <!-- <div id="opengraph-preview">
+        <canvas id="fb-post"></canvas>
+        <canvas id="vk-post"></canvas>
+        <canvas id="twi-post"></canvas>
+    </div>
+ -->
+    <div id="result">
+        <!-- Скачивалка изображения и дебагер-->
+        <a id="download-button" onclick="downloadImg(this,'image-debug')">Скачать картинку</a>   <a class="button" onclick="showPreview(this)">Показать</a><br/>
+        <!-- Канвас-дебагер -->
+        <canvas id="image-debug" width="960px" height="480">
+            Ваш браузер не поддерживает &lt;canvas&gt;. Воспользуйтесь Гугль-Хромом или другим современным браузером
+        </canvas>
+    </div>
+</div>
+
+    <img id="background-image" src="http://yandex.ru/images/today?size=1920x1200"/>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

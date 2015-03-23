@@ -1,0 +1,183 @@
+@import 'variables'
+@import 'starty'
+
+body
+  width 100%
+  font-family f_Helvetica
+  background rgba(255, 255, 255, 1)
+  font-size 18px
+  line-height 20px
+
+.container
+	width 1000px
+	margin 0 auto 0 auto
+	padding 20px 20px 0px 20px
+	// background rgba(0, 140, 0, 0.1)
+
+.name
+	margin 40px 0 20px 0
+	// font-weight 300
+	font-family Shadow
+
+p
+	margin 30px 0 15px -20px
+
+.moloko-logo
+	width 100%
+	position absolute
+	bottom 32px
+	border 0
+	text-align center
+	font-family 'Shadow'
+	font-size 24px
+	color white
+	z-index 10
+	user-select none
+	opacity 0.2
+	
+.cover-container
+  width 1000px
+  height 480px
+  position relative
+
+#cover
+  width 960px
+  height 480px
+  position relative
+  overflow hidden
+  padding 0 0 45px 0
+  background-size cover !important
+  background-position center
+  background-image url(http://yandex.ru/images/today?size=1920x1200)
+  
+  &:after
+    content ' '
+    position absolute
+    width 100%
+    height 100%
+    top 0
+    left 0
+    background rgba(0, 0, 0, 0.6)
+
+#title-font
+	display none
+	
+	#title-font-size, #title-font-weight
+		width 50px
+
+#text
+  position relative
+  width 800px
+  margin 100px 80px 0 80px
+  color #fff
+  z-index 1
+  
+	#title
+		width 100%
+		height 104px
+		background none
+		text-align center
+		font-family 'PT Sans Caption'
+		font-weight 600
+		font-size 52px
+		color #fff
+		border 0
+		outline none
+		resize none
+		spellcheck none
+	  
+	#subtitle
+		width 100%
+		margin 10px 0 0 0
+		background none
+		text-align center
+		font-family 'Helvetica Neue'
+		font-weight light
+		font-size 40px
+		color white
+		border 0
+		outline none
+		spellcheck none
+	  
+input[type=range][orient=vertical]
+  writing-mode bt-lr
+  -webkit-appearance slider-vertical
+  width 8px
+  height 480px
+  padding 0 5px
+  position absolute
+  z-index 0
+  right 0
+  top -2
+
+#imageUrl
+  width 250px
+
+#background-image
+  visibility hidden
+
+#result
+  // display none
+  position relative
+
+.button
+  background transparent
+  border 1px solid #8C8C8C
+  padding 10px 15px
+  margin-right 15px
+  font-family sans-serif
+  color #8C8C8C
+  font-size 16px
+  font-weight bold
+  border-radius 3px
+  outline none
+  text-decoration none
+  transition .1s
+  cursor pointer
+
+.button:hover,.button_selected
+  background #8C8C8C
+  color white
+
+#download-button
+  background transparent
+  border 1px solid #4cbd18
+  padding 10px 15px
+  margin-right 15px
+  font-family sans-serif
+  color #4cbd18
+  font-size 16px
+  font-weight bold
+  border-radius 3px
+  outline none
+  transition .1s
+  text-decoration none
+  cursor pointer
+  display inline-block
+  margin 10px 0px
+  
+  &:before
+    content '↓ '
+    
+  &:active
+    &:before
+      content '✓ '
+      
+  &:hover
+    background #4cbd18
+    color white
+
+#image-debug
+  // visibility hidden
+
+#code
+  display none
+  width 620px
+  height 150px
+  padding 15px
+  font-size 16px
+  background #dedede
+  color #696969
+  border 0
+
+@import 'typo'
