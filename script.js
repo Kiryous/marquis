@@ -65,7 +65,6 @@ function createImage() {
     ctx.fillStyle = 'rgba(255, 255, 255, 1)';
     ctx.textAlign = 'center';
     wrapText(ctx, title.value, 485, 151, maxWidth, 1.25 * titleFontSize);
-    console.log(title.offsetHeight);
 
     // Пишем логотип
     ctx.font = '24px Shadow';
@@ -142,13 +141,13 @@ function downloadImg(link) {
 
     var filename = title.value.slice(0,15)+'(Молоко).png';
     link.href = canvas.toDataURL("image/png");
+    
     link.download = filename;
 }
 
 function showPreview(button) {
     var canvas = document.getElementById('image-debug');
     createImage();
-    console.log(canvas.style.visibility);
     if (canvas.style.visibility=='hidden'|canvas.style.visibility=='') { 
         canvas.style.visibility = 'visible';
         button.className='button button_selected';
