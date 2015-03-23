@@ -134,14 +134,14 @@ function transLit(w, v) {
 
 // Создание кнопки скачивания
 function downloadImg(link) {
-    var canvasId = 'image-debug',
-        canvas = document.getElementById(canvasId),
+    var canvasId = 'image-debug';
+    var canvas = document.getElementById(canvasId),
         title = document.getElementById('title'),
         subtitle = document.getElementById('subtitle');
 
+    createImage();
     var filename = title.value.slice(0,15)+'(Молоко).png';
     link.href = canvas.toDataURL("image/png");
-    
     link.download = filename;
 }
 
