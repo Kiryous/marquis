@@ -37,7 +37,7 @@ function createImage() {
 
      // Склеиваем параметры заголовка
     var titleFontStyle = titleFontWeight + ' ' + titleFontSize + 'px ' + titleFontFamily,
-        maxWidth = '750';
+        maxWidth = '800';
 
     // Включаем видимость канваса
     document.getElementById(canvasId).style.display='block';
@@ -64,7 +64,7 @@ function createImage() {
     ctx.font = titleFontStyle;
     ctx.fillStyle = 'rgba(255, 255, 255, 1)';
     ctx.textAlign = 'center';
-    wrapText(ctx, title.value, 485, title.clientHeight + 85, maxWidth, 1.618 * titleFontSize);
+    wrapText(ctx, title.value, 485, title.clientHeight + 85, maxWidth, 1.418 * titleFontSize);
 
     // Пишем логотип
     ctx.font = '24px Shadow';
