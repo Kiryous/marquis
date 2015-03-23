@@ -64,7 +64,8 @@ function createImage() {
     ctx.font = titleFontStyle;
     ctx.fillStyle = 'rgba(255, 255, 255, 1)';
     ctx.textAlign = 'center';
-    wrapText(ctx, title.value, 485, title.clientHeight + 85, maxWidth, 1.418 * titleFontSize);
+    wrapText(ctx, title.value, 485, 151, maxWidth, 1.25 * titleFontSize);
+    console.log(title.offsetHeight);
 
     // Пишем логотип
     ctx.font = '24px Shadow';
@@ -133,15 +134,15 @@ function transLit(w, v) {
 }
 
 // Создание кнопки скачивания
-function downloadImg(link,canvasId) {
-	var canvas = document.getElementById(canvasId),
-    quotation = document.getElementById('quotation'),
-    quote = document.getElementById('quote'),
-    author = document.getElementById('author');
-    var filename = transLit(author.value)+'--'+transLit(quote.value.slice(0,15))+'(quote)….png';
+function downloadImg(link) {
+    var canvasId = 'image-debug',
+        canvas = document.getElementById(canvasId),
+        title = document.getElementById('title'),
+        subtitle = document.getElementById('subtitle');
+
+    var filename = title.value.slice(0,15)+'(Молоко).png';
     link.href = canvas.toDataURL("image/png");
     link.download = filename;
-  
 }
 
 function showPreview(button) {
