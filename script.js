@@ -140,7 +140,7 @@ function downloadImg(link) {
         subtitle = document.getElementById('subtitle');
 
     createImage();
-    var filename = title.value.slice(0,15)+'(Молоко).png';
+    var filename = title.value.slice(0,15)+'...(Молоко).png';
     link.href = canvas.toDataURL("image/png");
     link.download = filename;
 }
