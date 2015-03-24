@@ -5,7 +5,7 @@
     <!-- Стили -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Шрифт заголвка и логотипа -->
-    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/css/shadow.css" />
     <!-- Скрипт, который авторесайзит поле заголовка -->
     <script type="text/javascript">
@@ -32,7 +32,7 @@
     <form id="title-font">
         font-family:<input id="title-font-family" type="text" value="PT Sans Caption">  
         font-size:<input id="title-font-size" type="number" value="52"/>px  
-        font-weight:<input id="title-font-weight" type="text" value="600">
+        font-weight:<input id="title-font-weight" type="text" value="700">
     </form>
     <!-- WISWIG окошко -->
     <div class="cover-container">
@@ -47,21 +47,22 @@
         <input type="range" id="bg-position" min="0" max="100" step="0.1" orient="vertical" oninput="changeBgPosition(this.value)"/>
     </div>
 
-    <p>4. Посмотрите, как картинка будет выглядеть в сетях и опенграфе</p>
+    <!-- <p>3. Посмотрите, как картинка будет выглядеть в сетях и опенграфе</p> -->
     <!-- Предпросмотр постов в соцсетях -->
     <!-- <div id="networks-preview">
         <canvas id="fb-post"></canvas>
         <canvas id="vk-post"></canvas>
         <canvas id="twi-post"></canvas>
-    </div>
- -->
+    </div> -->
+
     <!-- Предпросмотр опенграфа -->
     <!-- <div id="opengraph-preview">
         <canvas id="fb-post"></canvas>
         <canvas id="vk-post"></canvas>
         <canvas id="twi-post"></canvas>
-    </div>
- -->
+    </div> -->
+
+    <p>3. Нажмите правой кнопкой мыши и сохраните изображение к себе. (Скачивалка пока не работает)</p>
     <div id="result">
         <!-- Скачивалка изображения и дебагер-->
         <a id="download-button" onclick="downloadImg(this)">Скачать картинку</a>
