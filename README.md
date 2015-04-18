@@ -1,2 +1,2 @@
 # Marquis / Маркиз
-Internal Moloko tool for covers for social network's posts 
+Внутренний инструмент для создания обложек к постам в социальных сетях
