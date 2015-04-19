@@ -109,10 +109,11 @@ function handleFileSelect(evt) {
 
 // Вставка файла по ссылке
 function changeBg(url) {
+    var backgroundImage = document.getElementById('background-image');
     document.getElementById('cover').style.backgroundImage = 'url(' + url + ')';
-    document.getElementById('background-image').crossOrigin = "Anonymous";
-    document.getElementById('background-image').src = url;
-    setTimeout(createImage, 100);
+    backgroundImage.crossOrigin = "Anonymous";
+    backgroundImage.src = url;
+    backgroundImage.onload = createImage();
 }
 
 function changeBgPosition (position) {
