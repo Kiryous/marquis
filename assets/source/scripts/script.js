@@ -21,7 +21,6 @@ function wrapText(context, text, x, y, maxWidth, lineHeight) {
 // Отрисовка цитаты канвасом
 function createImage() {
     var canvasId = 'image-debug';
-    var imageResult = document.getElementById('image-result');
     var canvas = document.getElementById(canvasId),
         ctx = canvas.getContext('2d'),
         cover = document.getElementById('cover'),
@@ -41,7 +40,7 @@ function createImage() {
         maxWidth = '800';
 
     // Включаем видимость канваса
-    // document.getElementById(canvasId).style.display='block';
+    document.getElementById(canvasId).style.display='block';
 
     canvas.height = cover.offsetHeight;
     canvas.width = cover.offsetWidth;
@@ -76,9 +75,6 @@ function createImage() {
     // Пишем подзаголовок (пока нет)
     // ctx.font = authorStyle;
     // ctx.fillText(author.value, 90, 60 + quote.clientHeight);
-
-    imageResult.crossOrigin = 'Anonymous';
-    imageResult.src = canvas.toDataURL('image/png');
 }
 
 // Чтение и вставка файла из инпута
@@ -102,9 +98,7 @@ function handleFileSelect(evt) {
                 // Render thumbnail.
                 cover.style.backgroundImage = 'url(' + e.target.result + ')';
                 var backgroundImage = document.getElementById('background-image');
-                backgroundImage.crossOrigin = 'Anonymous';
-                localStorage['image'] = e.target.result;
-                backgroundImage.src = localStorage['image'];
+                backgroundImage.src = e.target.result;
             };
         })(f);
         // Read in the image file as a data URL.
@@ -116,7 +110,6 @@ function handleFileSelect(evt) {
 // Вставка файла по ссылке
 function changeBg(url) {
     document.getElementById('cover').style.backgroundImage = 'url(' + url + ')';
-    backgroundImage.crossOrigin = "Anonymous";
     document.getElementById('background-image').src = url;
     setTimeout(createImage, 100);
 }
