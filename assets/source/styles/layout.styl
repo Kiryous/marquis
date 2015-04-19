@@ -3,6 +3,7 @@
 
 body
   width 100%
+  // max-width 1000px
   font-family f_Helvetica
   background rgba(255, 255, 255, 1)
   font-size 18px
@@ -51,7 +52,7 @@ p
   padding 0 0 45px 0
   background-size cover !important
   background-position center
-  background-image url(http://yandex.ru/images/today?size=1920x1200)
+  background-image url(../images/alien.png)
   
   &:after
     content ' '
@@ -171,7 +172,8 @@ input[type=range][orient=vertical]
     color white
 
 #image-debug
-  // visibility hidden
+  // display none
+  visibility hidden
 
 #code
   display none
@@ -182,5 +184,7 @@ input[type=range][orient=vertical]
   background #dedede
   color #696969
   border 0
+
+@import 'milkcards'
 
 @import 'typo'

@@ -63,17 +63,19 @@
     </div> -->
 
     <p>3. Нажмите правой кнопкой мыши и сохраните изображение к себе. (Скачивалка пока не работает)</p>
+
     <div id="result">
         <!-- Скачивалка изображения и дебагер-->
         <a id="download-button" onclick="downloadImg(this)">Скачать картинку</a>
-        <!-- Канвас-дебагер -->
-        <canvas id="image-debug" width="960px" height="480">
-            Ваш браузер не поддерживает &lt;canvas&gt;. Воспользуйтесь Гугль-Хромом или другим современным браузером
-        </canvas>
+        <img id="image-result" width="960px" height="480px"/>
     </div>
 </div>
-
-    <img id="background-image" src="http://yandex.ru/images/today?size=1920x1200"/>
+    <!-- Канвас-где всё рисуется -->
+    <canvas id="image-debug" width="960px" height="480">
+        Ваш браузер не поддерживает &lt;canvas&gt;. Воспользуйтесь Гугль-Хромом или другим современным браузером
+    </canvas>
+    <!-- Источник фоновой картинки -->
+    <img id="background-image" src="assets/images/alien.png"/>
     <script src="assets/js/all.js"></script>
 </body>
 </html>
