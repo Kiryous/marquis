@@ -110,6 +110,7 @@ function handleFileSelect(evt) {
 // Вставка файла по ссылке
 function changeBg(url) {
     document.getElementById('cover').style.backgroundImage = 'url(' + url + ')';
+    document.getElementById('background-image').crossOrigin = "Anonymous";
     document.getElementById('background-image').src = url;
     setTimeout(createImage, 100);
 }

@@ -77,7 +77,7 @@ p {
   padding: 0 0 45px 0;
   background-size: cover !important;
   background-position: center;
-  background-image: url("http://yandex.ru/images/today?size=1920x1200");
+  background-image: url("../images/alien.png");
 }
 #cover:after {
   content: ' ';
