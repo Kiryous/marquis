@@ -77,7 +77,7 @@ p {
   padding: 0 0 45px 0;
   background-size: cover !important;
   background-position: center;
-  background-image: url("../images/lighthouse.png");
+  background-image: url("../images/lighthouse.jpg");
 }
 #cover:after {
   content: ' ';
