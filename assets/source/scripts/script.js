@@ -112,8 +112,8 @@ function changeBg(url) {
     var backgroundImage = document.getElementById('background-image');
     document.getElementById('cover').style.backgroundImage = 'url(' + url + ')';
     backgroundImage.crossOrigin = "Anonymous";
-    backgroundImage.onload = createImage();
     backgroundImage.src = url;
+    createImage();
 }
 
 function changeBgPosition (position) {
