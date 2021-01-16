@@ -98,6 +98,7 @@ function handleFileSelect(evt) {
                 // Render thumbnail.
                 cover.style.backgroundImage = 'url(' + e.target.result + ')';
                 var backgroundImage = document.getElementById('background-image');
+		backgroundImage.crossOrigin = "anonymous";
                 backgroundImage.src = e.target.result;
             };
         })(f);
